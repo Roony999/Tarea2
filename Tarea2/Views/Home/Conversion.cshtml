@@ -1,0 +1,60 @@
+﻿
+
+
+@* <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/styles.css">
+    <title>Convertidor</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="~/img/perro_sorprendido.jpg" alt="Logo">
+        </div>
+        <a href="#" class="p"><p>Llevele llevele</p></a>
+    </header>
+
+    <div class="container">
+        <form asp-controller="Home" asp-action="Convertir" method="post">
+            <div class="form-group">
+                <label for="Cantidad">Cantidad:</label>
+                <input asp-for="Cantidad" type="number" step="0.01" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="MonedaOrigen">Moneda de Origen:</label>
+                <select asp-for="MonedaOrigen" class="form-control" required>
+                    <option value="MXN">MXN</option>
+                    <option value="USD">USD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="MonedaDestino">Moneda de Destino:</label>
+                <select asp-for="MonedaDestino" class="form-control" required>
+                    <option value="MXN">MXN</option>
+                    <option value="USD">USD</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Convertir</button>
+            </div>
+        </form>
+
+        <div class="alert ">
+            Resultado:
+            @if (Model.Resultado != 0)
+            {
+                <p>@Model.Resultado</p>
+            }
+        </div>
+    </div>
+
+    <footer class="abajo">
+        <div class="box">
+            <small>&copy; 2023 <b>Progra web</b> - Cama y Mesa - Roberto Carlos </small>
+        </div>
+    </footer>
+</body>
+</html>  *@
